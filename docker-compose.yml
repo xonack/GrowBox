@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  unit1-fastapi:
+    build: .
+    ports:
+      - "9090:9090"
+  unit1-redis:
+    image: "redis:latest"
