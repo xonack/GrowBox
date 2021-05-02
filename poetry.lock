@@ -44,6 +44,29 @@ python-versions = "*"
 test = ["Cython (==0.29.14)"]
 
 [[package]]
+name = "prometheus-client"
+version = "0.10.1"
+description = "Python client for the Prometheus monitoring system."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+twisted = ["twisted"]
+
+[[package]]
+name = "prometheus-fastapi-instrumentator"
+version = "5.7.1"
+description = "Instrument your FastAPI with Prometheus metrics"
+category = "main"
+optional = false
+python-versions = ">=3.6.0,<4.0.0"
+
+[package.dependencies]
+fastapi = ">=0.38.1,<1.0.0"
+prometheus-client = ">=0.8.0,<1.0.0"
+
+[[package]]
 name = "pydantic"
 version = "1.7.3"
 description = "Data validation and settings management using python 3.6 type hinting"
@@ -104,7 +127,7 @@ python-versions = ">=3.6.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "8fb854349cdab8329b78a4595f296d5d4b45bf75db0e27906a9b4fa9833a6f76"
+content-hash = "e17ff8bd763aa419af74c70565a171a2e9b62d72810480a108a9cd873b9d2ffa"
 
 [metadata.files]
 click = [
@@ -132,6 +155,14 @@ httptools = [
     {file = "httptools-0.1.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:3592e854424ec94bd17dc3e0c96a64e459ec4147e6d53c0a42d0ebcef9cb9c5d"},
     {file = "httptools-0.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:0a4b1b2012b28e68306575ad14ad5e9120b34fccd02a81eb08838d7e3bbb48be"},
     {file = "httptools-0.1.1.tar.gz", hash = "sha256:41b573cf33f64a8f8f3400d0a7faf48e1888582b6f6e02b82b9bd4f0bf7497ce"},
+]
+prometheus-client = [
+    {file = "prometheus_client-0.10.1-py2.py3-none-any.whl", hash = "sha256:030e4f9df5f53db2292eec37c6255957eb76168c6f974e4176c711cf91ed34aa"},
+    {file = "prometheus_client-0.10.1.tar.gz", hash = "sha256:b6c5a9643e3545bcbfd9451766cbaa5d9c67e7303c7bc32c750b6fa70ecb107d"},
+]
+prometheus-fastapi-instrumentator = [
+    {file = "prometheus-fastapi-instrumentator-5.7.1.tar.gz", hash = "sha256:5371f1b494e2b00017a02898d854119b4929025d1a203670b07b3f42dd0b5526"},
+    {file = "prometheus_fastapi_instrumentator-5.7.1-py3-none-any.whl", hash = "sha256:da40ea0df14b0e95d584769747fba777522a8df6a8c47cec2edf798f1fff49b5"},
 ]
 pydantic = [
     {file = "pydantic-1.7.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:c59ea046aea25be14dc22d69c97bee629e6d48d2b2ecb724d7fe8806bf5f61cd"},
